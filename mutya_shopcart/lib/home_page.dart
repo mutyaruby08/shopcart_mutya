@@ -21,18 +21,19 @@ class HomePage extends StatelessWidget {
               Consumer<DataClass>(builder: (context, data, child) {
                 return Text(
                   '${data.x}',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  style: const TextStyle(
+                      fontSize: 20, fontWeight: FontWeight.bold),
                 );
               }),
-              Spacer(),
-              Text(
+              const Spacer(),
+              const Text(
                 "Total",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
               )
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 100,
         ),
         Padding(
@@ -53,11 +54,11 @@ class HomePage extends StatelessWidget {
                     Get.snackbar("Item", "Can not more than this",
                         backgroundColor: Colors.black,
                         colorText: Colors.white,
-                        titleText: Text(
+                        titleText: const Text(
                           "Item",
                           style: TextStyle(fontSize: 40, color: Colors.white),
                         ),
-                        messageText: Text(
+                        messageText: const Text(
                           "Can not be more than this",
                           style: TextStyle(fontSize: 20, color: Colors.white),
                         ));
@@ -66,7 +67,7 @@ class HomePage extends StatelessWidget {
                   }
                 },
               ),
-              Spacer(),
+              const Spacer(),
               Container(
                 height: 60,
                 width: 200,
@@ -79,16 +80,16 @@ class HomePage extends StatelessWidget {
                     children: [
                       GestureDetector(
                           onTap: () {
-                            Get.to(() => SecondPage(),
+                            Get.to(() => const SecondPage(),
                                 transition: Transition.upToDown,
-                                duration: Duration(seconds: 1));
+                                duration: const Duration(seconds: 1));
                           },
-                          child: Text(
+                          child: const Text(
                             "Next Page",
                             style: TextStyle(fontSize: 20, color: Colors.white),
                           )),
-                      Spacer(),
-                      Icon(Icons.skip_next, color: Colors.white)
+                      const Spacer(),
+                      const Icon(Icons.skip_next, color: Colors.white)
                     ],
                   ),
                 ),
